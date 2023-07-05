@@ -2,7 +2,6 @@
 using mvp.Views;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,7 +70,7 @@ namespace mvp
         {
 
 
-            //string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
           
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -79,15 +78,18 @@ namespace mvp
                 {
                     connection.Open();
                     Console.WriteLine("Połączono z bazą danych.");
+                    MessageBox.Show("połączono");
 
                     // Wykonaj operacje na bazie danych
 
-                    connection.Close();
+                   /* connection.Close();
                     Console.WriteLine("Połączenie z bazą danych zamknięte.");
+                    MessageBox.Show("close");*/
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("Błąd połączenia z bazą danych: " + ex.Message);
+                    MessageBox.Show("błąd");
                 }
             }
 
