@@ -7,11 +7,13 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="800*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
         <Button Content="Powrót" HorizontalAlignment="Left" Margin="629,355,0,0" VerticalAlignment="Top" Height="69" Width="161" Click="Button_Click"/>
         <Button Content="Dodaj użytkownika" HorizontalAlignment="Left" Margin="425,150,0,0" VerticalAlignment="Top"/>
         <Button Content="Zaktualizuj uprawnienia użytkownika" HorizontalAlignment="Left" Margin="425,315,0,0" VerticalAlignment="Top" />
-        <ListBox HorizontalAlignment="Left" Height="86" Margin="222,292,0,0" VerticalAlignment="Top" Width="156" d:ItemsSource="{d:SampleData ItemCount=3}" />
-        <ListBox HorizontalAlignment="Left" Height="86" Margin="44,292,0,0" VerticalAlignment="Top" Width="156" d:ItemsSource="{d:SampleData ItemCount=3}" />
         <Label Content="Wybieramy rolę uprawnień &#xD;&#xA;z zdefiniowanej listy" HorizontalAlignment="Left" Margin="218,213,0,0" VerticalAlignment="Top" Height="48" Width="164"/>
         <Label Content="Wybieramy użytkownika" HorizontalAlignment="Left" Margin="44,229,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Margin="44,150,0,0" TextWrapping="Wrap" Text="Użytkownik" VerticalAlignment="Top" Width="120" />
@@ -21,8 +23,9 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="167" Margin="10,22,0,0" VerticalAlignment="Top" Width="578">
             <Label Content="Sekcja tworzenia&#xD;&#xA; użytkowników" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="145" Margin="403,19,0,0"/>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="205" Margin="35,201,0,0" VerticalAlignment="Top" Width="589"/>
         <Label Content="Sekcja edycji użytkowników" HorizontalAlignment="Left" Height="38" Margin="433,217,0,0" VerticalAlignment="Top" Width="145"/>
+        <DataGrid x:Name="xyzz" Margin="18,266,266,20"/>
+        <Button Content="Button" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="676,133,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
     </Grid>
 </Window>

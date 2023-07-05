@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +33,44 @@ namespace mvp.Views
             win2.Show();
             this.Close(); //only if you want to close the current form.
         }
-       
+        /*
+                private void Button_Click_1(object sender, RoutedEventArgs e)
+                {
+
+                    string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString))
+                    {
+                        connection.Open();
+                        string sqll = "select * from [DbTest].[dbo].[Products]";
+                        xyzz.ItemsSource= SqlCommand(sql)
+
+                    }
+
+                }*/
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "SELECT * FROM [DbTest].[dbo].[Products]";
+
+                // Tworzenie obiektu SqlDataAdapter
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+
+                // Tworzenie obiektu DataTable
+                DataTable dataTable = new DataTable();
+
+                // Wypełnianie DataTable danymi z bazy danych
+                adapter.Fill(dataTable);
+
+                // Przypisanie DataTable do DataGrida
+                xyzz.ItemsSource = dataTable.DefaultView;
+            }
+        }
+
     }
 
 }
