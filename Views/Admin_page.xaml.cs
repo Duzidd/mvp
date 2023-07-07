@@ -148,8 +148,8 @@ namespace mvp.Views
                 SqlCommand command = new SqlCommand(sql, connection);
                 command.ExecuteNonQuery();
 
-                // Aktualizowanie danych w DataGridu
-                RefreshDataGrid();
+                /*// Aktualizowanie danych w DataGridu
+                RefreshDataGrid();*/
                
             }
         }
