@@ -30,21 +30,61 @@
             </Grid.ColumnDefinitions>
             <Button Content="Powrót" HorizontalAlignment="Left" Margin="566,361,0,0" VerticalAlignment="Top" Height="59" Width="107" Click="Button_Click"/>
             <Button Content="Dodaj użytkownika" HorizontalAlignment="Left" Margin="526,221,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
-            <TextBox Name="x1" HorizontalAlignment="Left" Margin="18,273,0,0" TextWrapping="Wrap" Text="Użytkownik" VerticalAlignment="Top" Width="120"  />
-            <TextBox Name="x2" HorizontalAlignment="Left" Margin="189,273,0,0" TextWrapping="Wrap" Text="Hasło" VerticalAlignment="Top" Width="120" />
-            <Label Content="Podaj użytkownika do dodania" HorizontalAlignment="Left" Margin="14,215,0,0" VerticalAlignment="Top"/>
+            
+            <TextBox FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2" Name="x1" HorizontalAlignment="Left" Margin="18,273,0,0" TextWrapping="Wrap" Text="Użytkownik" VerticalAlignment="Top" Width="120"  />
+            <TextBox FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2" Name="x2" HorizontalAlignment="Left" Margin="189,273,0,0" TextWrapping="Wrap" Text="Hasło" VerticalAlignment="Top" Width="120" />
+            <Label  Content="Podaj użytkownika do dodania" HorizontalAlignment="Left" Margin="14,215,0,0" VerticalAlignment="Top"/>
             <Label Content="Podaj z jaką rolą go przydzielić" HorizontalAlignment="Left" Margin="192,215,0,0" VerticalAlignment="Top"/>
-            <DataGrid x:Name="xyzz" Margin="18,314,266,10"/>
+            <DataGrid  x:Name="xyzz" Margin="18,314,266,10"/>
             <Button Content="Pokaż użytkowników" HorizontalAlignment="Left" Margin="439,352,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-            <TextBox Name="x3" HorizontalAlignment="Left" Margin="341,273,0,0" TextWrapping="Wrap" Text="Rola" VerticalAlignment="Top" Width="120"/>
+            <TextBox FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2" Name="x3" HorizontalAlignment="Left" Margin="341,273,0,0" TextWrapping="Wrap" Text="Rola" VerticalAlignment="Top" Width="120"/>
             <Label Content="Podaj rolę" HorizontalAlignment="Left" Margin="390,215,0,0" VerticalAlignment="Top"/>
             <DataGrid x:Name="xyzz2" Margin="18,93,380,230"/>
-            <TextBox Name="x11" HorizontalAlignment="Left" Margin="18,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-            <TextBox Name="x12" HorizontalAlignment="Left" Margin="183,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2" Name="x11" HorizontalAlignment="Left" Margin="18,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Montserrat"                            
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2" Name="x12" HorizontalAlignment="Left" Margin="183,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
             <Label Content="Nazwa" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
             <Label Content="Opis" HorizontalAlignment="Left" Margin="226,10,0,0" VerticalAlignment="Top"/>
-            <Button Content="Dodaj produkt" HorizontalAlignment="Left" Margin="430,37,0,0" VerticalAlignment="Top" Height="31" Width="156" Click="Button_Click_3"/>
-            <Button Content="Pokaż produkty" HorizontalAlignment="Left" Margin="474,118,0,0" VerticalAlignment="Top" Height="50" Width="78" Click="Button_Click_4"/>
+            <Button BorderThickness="0"
+                         
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"     Content="Dodaj produkt" HorizontalAlignment="Left" Margin="430,37,0,0" VerticalAlignment="Top" Height="31" Width="156" Click="Button_Click_3"/>
+            <Button BorderThickness="0"
+                            
+                           
+                            FontSize="12"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"   Content="Pokaż produkty" HorizontalAlignment="Left" Margin="474,118,0,0" VerticalAlignment="Top" Height="50" Width="78" Click="Button_Click_4"/>
 
 
         </Grid>
