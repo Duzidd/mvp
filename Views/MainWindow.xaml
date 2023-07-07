@@ -10,7 +10,7 @@
         <TextBox Name="login" HorizontalAlignment="Center" Margin="0,97,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="359" Height="46" TextAlignment="Center"/>
         <TextBox HorizontalAlignment="Center" Margin="0,171,0,0" TextWrapping="Wrap" Text="Hasło" VerticalAlignment="Top" Width="360" Height="46" TextAlignment="Center"/>
         <Button Content="Zaloguj" HorizontalAlignment="Center" Margin="0,263,0,0" VerticalAlignment="Top" Height="70" Width="196" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="644,317,0,0" VerticalAlignment="Top" Height="107" Width="146" Click="Button_Click_1"/>
+        <Button Content="EXIT" HorizontalAlignment="Left" Margin="644,317,0,0" VerticalAlignment="Top" Height="107" Width="146" Click="Button_Click_1"/>
         <Button Content="Test bazy" HorizontalAlignment="Left" Margin="664,120,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
     </Grid>
 </Window>
