@@ -8,6 +8,8 @@
         Title="Edit_product" Height="450" Width="800">
     <Grid>
         <Button Content="Powrót" HorizontalAlignment="Left" Margin="659,336,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="18,37,314,130"/>
+        <Button Content="Edytuj produkt&#xD;&#xA;" HorizontalAlignment="Left" Margin="575,87,0,0" VerticalAlignment="Top" Height="141" Width="166"/>
 
     </Grid>
 </Window>

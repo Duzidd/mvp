@@ -6,24 +6,47 @@
         xmlns:local="clr-namespace:mvp.Views"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="800*"/>
-            <ColumnDefinition Width="133*"/>
-        </Grid.ColumnDefinitions>
-        <Button Content="Powrót" HorizontalAlignment="Left" Margin="629,355,0,0" VerticalAlignment="Top" Height="69" Width="161" Click="Button_Click"/>
-        <Button Content="Dodaj użytkownika" HorizontalAlignment="Left" Margin="498,148,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
-        <Button Content="Zaktualizuj uprawnienia użytkownika" HorizontalAlignment="Left" Margin="425,315,0,0" VerticalAlignment="Top"  />
-        <Label Content="Wybieramy rolę uprawnień &#xD;&#xA;z zdefiniowanej listy" HorizontalAlignment="Left" Margin="218,213,0,0" VerticalAlignment="Top" Height="48" Width="164"/>
-        <Label Content="Wybieramy użytkownika" HorizontalAlignment="Left" Margin="44,229,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="x1" HorizontalAlignment="Left" Margin="44,150,0,0" TextWrapping="Wrap" Text="Użytkownik" VerticalAlignment="Top" Width="120"  />
-        <TextBox Name="x2" HorizontalAlignment="Left" Margin="222,150,0,0" TextWrapping="Wrap" Text="Rola" VerticalAlignment="Top" Width="120" />
-        <Label Content="Podaj użytkownika do dodania" HorizontalAlignment="Left" Margin="18,77,0,0" VerticalAlignment="Top"/>
-        <Label Content="Podaj z jaką rolą go przydzielić" HorizontalAlignment="Left" Margin="196,77,0,0" VerticalAlignment="Top"/>
-        <Label Content="Sekcja edycji użytkowników" HorizontalAlignment="Left" Height="38" Margin="433,217,0,0" VerticalAlignment="Top" Width="145"/>
-        <DataGrid x:Name="xyzz" Margin="18,266,266,20"/>
-        <Button Content="Button" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="676,133,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <TextBox Name="x3" HorizontalAlignment="Left" Margin="360,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+    <Border CornerRadius="10"                    
+            BorderThickness="2"
+            Opacity="0.95">
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#5f69fa" Offset="0"/>
+                <GradientStop Color="#DA34AE" Offset="0.75"/>
+                <GradientStop Color="#8A16C1" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
+                <GradientStop Color="#5f69fa" Offset="0"/>
+                <GradientStop Color="#5f69fa" Offset="1"/>
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
 
-    </Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="800*"/>
+                <ColumnDefinition Width="133*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Powrót" HorizontalAlignment="Left" Margin="566,361,0,0" VerticalAlignment="Top" Height="59" Width="107" Click="Button_Click"/>
+            <Button Content="Dodaj użytkownika" HorizontalAlignment="Left" Margin="526,221,0,0" VerticalAlignment="Top" Click="Button_Click_2"/>
+            <TextBox Name="x1" HorizontalAlignment="Left" Margin="18,273,0,0" TextWrapping="Wrap" Text="Użytkownik" VerticalAlignment="Top" Width="120"  />
+            <TextBox Name="x2" HorizontalAlignment="Left" Margin="189,273,0,0" TextWrapping="Wrap" Text="Hasło" VerticalAlignment="Top" Width="120" />
+            <Label Content="Podaj użytkownika do dodania" HorizontalAlignment="Left" Margin="14,215,0,0" VerticalAlignment="Top"/>
+            <Label Content="Podaj z jaką rolą go przydzielić" HorizontalAlignment="Left" Margin="192,215,0,0" VerticalAlignment="Top"/>
+            <DataGrid x:Name="xyzz" Margin="18,314,266,10"/>
+            <Button Content="Pokaż użytkowników" HorizontalAlignment="Left" Margin="439,352,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <TextBox Name="x3" HorizontalAlignment="Left" Margin="341,273,0,0" TextWrapping="Wrap" Text="Rola" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Podaj rolę" HorizontalAlignment="Left" Margin="390,215,0,0" VerticalAlignment="Top"/>
+            <DataGrid x:Name="xyzz2" Margin="18,93,380,230"/>
+            <TextBox Name="x11" HorizontalAlignment="Left" Margin="18,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <TextBox Name="x12" HorizontalAlignment="Left" Margin="183,44,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nazwa" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Opis" HorizontalAlignment="Left" Margin="226,10,0,0" VerticalAlignment="Top"/>
+            <Button Content="Dodaj produkt" HorizontalAlignment="Left" Margin="430,37,0,0" VerticalAlignment="Top" Height="31" Width="156" Click="Button_Click_3"/>
+            <Button Content="Pokaż produkty" HorizontalAlignment="Left" Margin="474,118,0,0" VerticalAlignment="Top" Height="50" Width="78" Click="Button_Click_4"/>
+
+
+        </Grid>
+    </Border>
 </Window>

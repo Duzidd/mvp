@@ -56,7 +56,7 @@ namespace mvp.Views
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sql = "SELECT * FROM [DbTest].[dbo].[Products]";
+                string sql = "SELECT * FROM [Easy_erp].[dbo].[Users]";
 
                 // Tworzenie obiektu SqlDataAdapter
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
@@ -82,13 +82,14 @@ namespace mvp.Views
             string value1 = x1.Text;
             string value2 = x2.Text;
             string value3 = x3.Text;
+            
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
                 // Polecenie SQL do wstawienia danych
-                string sql = $"INSERT INTO [DbTest].[dbo].[Products] ([Name], [Description], [Category]) VALUES ('{value1}', '{value2}', '{value3}')";
+                string sql = $"INSERT INTO [Easy_erp].[dbo].[Users] ([Name], [Password], [Role]) VALUES ('{value1}', '{value2}','{value3}')";
 
                 // Wykonanie polecenia SQL
                 SqlCommand command = new SqlCommand(sql, connection);
@@ -106,7 +107,7 @@ namespace mvp.Views
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string sql = "SELECT * FROM [DbTest].[dbo].[Products]";
+                string sql = "SELECT * FROM [Easy_erp].[dbo].[Users]";
 
                 // Tworzenie obiektu SqlDataAdapter
                 SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
@@ -126,9 +127,55 @@ namespace mvp.Views
             }
         }
 
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+
+            // Odczytanie wartości z TextBoxów
+            string value1 = x11.Text;
+            string value2 = x12.Text;
+            
 
 
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
 
+                // Polecenie SQL do wstawienia danych
+                string sql = $"INSERT INTO [Easy_erp].[dbo].[Products] ([Name], [Description]) VALUES ('{value1}','{value2}')";
+
+                // Wykonanie polecenia SQL
+                SqlCommand command = new SqlCommand(sql, connection);
+                command.ExecuteNonQuery();
+
+                // Aktualizowanie danych w DataGridu
+                RefreshDataGrid();
+               
+            }
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            string connectionString = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=master;Integrated Security=True;Connect Timeout=30;Encrypt=False;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "SELECT * FROM [Easy_erp].[dbo].[Products]";
+
+                // Tworzenie obiektu SqlDataAdapter
+                SqlDataAdapter adapter = new SqlDataAdapter(sql, connection);
+
+                // Tworzenie obiektu DataTable
+                DataTable dataTable = new DataTable();
+
+                // Wypełnianie DataTable danymi z bazy danych
+                adapter.Fill(dataTable);
+
+                // Przypisanie DataTable do DataGrida
+                xyzz2.ItemsSource = dataTable.DefaultView;
+            }
+        }
     }
 }
 
